@@ -9,6 +9,12 @@ docker build -t dingtalk-push:latest .
 docker run -d -p 8080:8080 --restart always -v /data/log/dingtalk-push/logs:/app/logs -v /etc/localtime:/etc/localtime:ro -e "TZ=Asia/Shanghai" --name dingtalk-push dingtalk-push:latest
 ```
 
+### SDK
+
+`dingtalk-push`为了方便调用，支持如下版本SDK：
+
+[Golang](https://github.com/xiiiew/dingtalk-push-golang-sdk)
+
 ### 配置文件
 
 ```yaml
