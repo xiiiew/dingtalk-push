@@ -1,0 +1,30 @@
+app:
+  app_name: dingtalk-push
+
+log:
+  # 日志文件路径
+  logs_dir: ./logs
+  # 日志文件分割频率(小时)
+  logs_rotation_time: 1
+  # 日志文件保存个数
+  logs_rotation_count: 100
+
+http:
+  # 监听端口
+  server_listen_port: 8080
+  # 跨域
+  cors:
+    # 启用跨域配置
+    enable: false
+    access_control_allow_origin: '*'
+    access_control_allow_methods: POST,GET,OPTIONS,DELETE,HEAD,PUT
+    access_control_allow_headers: Authorization,Content_Type,Accept,Origin,User_Agent,DNT,Cache_Control,X_Mx_ReqToken,X_Data_Type,X_Requested_With, X_Data_Type,X_Auth_Token,token,language,Pragma
+
+dingtalk:
+  # 发消息超时时间
+  time_out: 10
+  # 消息间隔时间(单位：秒)
+  message_duration: 3
+  # 多条消息分界线
+  boundary: '-----一条华丽的分割线-----'
+
